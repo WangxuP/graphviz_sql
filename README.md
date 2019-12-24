@@ -46,7 +46,7 @@ data['target'] = iris.target
 X_train, X_test, y_train, y_test = train_test_split(
                    data[feature_names], data['target'], test_size=0.33, random_state=42)
 clf = clf.fit(data[feature_names], data['target'])
-# tree_rule_2.txt为输出文件的路径
+# tree_rule.dot为输出文件的路径
 tree.export_graphviz(clf,out_file='tree_rule.dot',
                             feature_names=feture_selected_res,
                             class_names=['0', '1'],
@@ -59,7 +59,11 @@ tree.export_graphviz(clf,out_file='tree_rule.dot',
 # 调用插件  
 from graphviz_sql.extract import to_sql 
 
+<<<<<<< HEAD
 # tree_rule.txt: 通过决策树生成的用于graphviz画图的文件路径
+=======
+# tree_rule.dot: 通过决策树生成的用于graphviz画图的文件路径
+>>>>>>> 2a2c36fd09f3cb9f137e63d3583991040d24ba59
 # tree_rule_2.sql: 转换后的sql文件路径 
 to_sql('tree_rule.dot', 'tree_rule_2.sql')
 ```
