@@ -9,9 +9,9 @@
 - 安装方法:支持在线安装或离线安装
     - [download](https://pypi.org/manage/project/graphviz-sql/releases/)  
 > pip install graphviz_sql
-- 内部
+- 内部依赖
 	- sklearn
-- 外部
+- 外部依赖
 	- [Graphviz](https://graphviz.gitlab.io/download/):找到适合自己版本下载即可
 
 
