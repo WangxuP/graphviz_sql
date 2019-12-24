@@ -7,11 +7,11 @@
 
 ## 2. 安装环境、依赖
 - 安装方法:支持在线安装或离线安装
-    - [download](https://pypi.org/manage/project/graphviz-sql/releases/)  
+    - [download](https://pypi.org/project/graphviz-sql/)  
 > pip install graphviz_sql
-- 内部
+- 内部依赖
 	- sklearn
-- 外部
+- 外部依赖
 	- [Graphviz](https://graphviz.gitlab.io/download/):找到适合自己版本下载即可
 
 
@@ -47,7 +47,7 @@ X_train, X_test, y_train, y_test = train_test_split(
                    data[feature_names], data['target'], test_size=0.33, random_state=42)
 clf = clf.fit(data[feature_names], data['target'])
 # tree_rule_2.txt为输出文件的路径
-tree.export_graphviz(model,out_file='tree_rule.dot',
+tree.export_graphviz(clf,out_file='tree_rule.dot',
                             feature_names=feture_selected_res,
                             class_names=['0', '1'],
                             filled=True,
@@ -59,7 +59,7 @@ tree.export_graphviz(model,out_file='tree_rule.dot',
 # 调用插件  
 from graphviz_sql.extract import to_sql 
 
-# tree_rule_2.txt: 通过决策树生成的用于graphviz画图的文件路径
+# tree_rule.txt: 通过决策树生成的用于graphviz画图的文件路径
 # tree_rule_2.sql: 转换后的sql文件路径 
 to_sql('tree_rule.dot', 'tree_rule_2.sql')
 ```
@@ -68,5 +68,12 @@ to_sql('tree_rule.dot', 'tree_rule_2.sql')
 # 5. 常见问题说明
 - 乱码
 	- 此问题可百度一下，网上有具体的处理办法，
-	- 
+	- 其它问题请及时反馈
+    
+## 6. 加入进来
+强大的工具需要你我共同完善，期待技术大佬的加入。
+
+- email:
+> wang_xup@163.com  
+> 857956556@qq.com
     

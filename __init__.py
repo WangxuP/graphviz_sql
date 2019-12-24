@@ -1,5 +1,5 @@
 __all__ = ['extract']
-__verision__ = '0.1.5'
+__verision__ = '0.1.8'
 from . import extract
 # __author__: wangxupeng
 # __QQ__: 857956556
