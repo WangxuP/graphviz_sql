@@ -59,7 +59,7 @@ tree.export_graphviz(model,out_file='tree_rule.dot',
 # 调用插件  
 from graphviz_sql.extract import to_sql 
 
-# tree_rule_2.txt: 通过决策树生成的用于graphviz画图的文件路径
+# tree_rule.dot: 通过决策树生成的用于graphviz画图的文件路径
 # tree_rule_2.sql: 转换后的sql文件路径 
 to_sql('tree_rule.dot', 'tree_rule_2.sql')
 ```
