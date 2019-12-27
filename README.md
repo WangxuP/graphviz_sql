@@ -48,7 +48,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 clf = clf.fit(data[feature_names], data['target'])
 # tree_rule.dot为输出文件的路径
 tree.export_graphviz(clf,out_file='tree_rule.dot',
-                            feature_names=feture_selected_res,
+                            feature_names=feature_names,
                             class_names=['0', '1'],
                             filled=True,
                             node_ids=True,
